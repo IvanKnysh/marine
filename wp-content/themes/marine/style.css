@@ -1,0 +1,14 @@
+/*
+Theme Name: Marine
+Description: Marine theme for WordPress
+Author: Ivan Knysh
+Author URI: https://www.facebook.com/ivan.knysh.7
+Version: 1.0
+*/
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,800&display=swap');
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
