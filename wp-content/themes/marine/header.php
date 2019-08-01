@@ -16,7 +16,9 @@
         <div class="container">
             <div class="flx">
                 <div class="logo">
-                    <img src="<?= get_template_directory_uri() ?>/img/logo.png" alt="">
+                    <a href="<?php echo home_url() ?>">
+                        <img src="<?= get_template_directory_uri() ?>/img/logo.png" alt="">
+                    </a>
                 </div>
                 <div class="contacts">
                     <p>Call Us: <a href="tel:+1 800 450 17 04">+1 800 450 17 04</a> |</p>
