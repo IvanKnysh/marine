@@ -42,3 +42,48 @@ if( function_exists('acf_add_options_page') ) {
 register_nav_menus(array(
     'main_menu'    => 'Мenu'
 ));
+
+
+
+/**
+* Slider
+**/
+function slider() {
+
+	$labels = array(
+		'name'                => __( 'Slider', 'text-domain' ),
+		'all_items'           => __( 'All slides'),
+		'add_new'             => _x( 'Add slide', 'text-domain', 'text-domain' ),
+		'add_new_item'        => __( 'Enter slide name', 'text-domain' ),
+		'edit_item'           => __( 'Edit slide', 'text-domain' ),
+		'search_items'        => __( 'Search slides', 'text-domain' ),
+		'not_found'           => __( 'No slides', 'text-domain' )
+	);
+
+	$args = array(
+		'labels'                   => $labels,
+		'hierarchical'        => false,
+		'description'         => 'description',
+		'taxonomies'          => array(),
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 27,
+		'menu_icon'           => 'dashicons-images-alt2',
+		'show_in_nav_menus'   => true,
+		'publicly_queryable'  => true,
+		'exclude_from_search' => false,
+		'has_archive'         => true,
+		'query_var'           => true,
+		'can_export'          => true,
+		'rewrite'             => true,
+		'capability_type'     => 'post',
+		'supports'            => array(
+			'title')
+	);
+
+	register_post_type( 'slider', $args );
+}
+
+add_action( 'init', 'slider' );
