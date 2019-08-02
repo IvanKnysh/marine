@@ -8,6 +8,30 @@
                 </div>
                 <div class="col">
                     <h3>Recent Posts</h3>
+                    <?php $posts = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 2, 'order' => 'DESC' )); ?>
+                    <?php if ( $posts->have_posts() ) : ?>
+                    <?php while ( $posts->have_posts() ) : $posts->the_post(); ?>
+                        
+                        <div class="post">
+                            <div class="meta">
+                                <?php the_time('M d, Y') ?> | By <?php the_author() ?>
+                            </div>
+                            <h5>
+                            <div class="permalink">
+                                <a href="<?php the_permalink() ?>">
+                                    <?php the_title() ?>
+                                </a>
+                            </div>
+                            </h5>
+                            <div class="excerpt">
+                                <?php the_excerpt() ?>
+                            </div>
+                        </div>
+
+                    <?php endwhile; ?>
+                    <?php else: ?>
+                    <?php endif; ?>
+                    <?php wp_reset_query(); ?>
                 </div>
                 <div class="col">
                     <h3>Contacts</h3>
