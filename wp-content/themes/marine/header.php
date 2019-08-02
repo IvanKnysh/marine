@@ -23,27 +23,35 @@
                 <div class="contacts">
                     <p>Call Us: <a href="tel:+1 800 450 17 04">+1 800 450 17 04</a> |</p>
                     <div class="social">
-                        <a href="#">
-                            <img src="<?= get_template_directory_uri() ?>/img/facebook.png" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="<?= get_template_directory_uri() ?>/img/twitter.png" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="<?= get_template_directory_uri() ?>/img/skype.png" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="<?= get_template_directory_uri() ?>/img/glus.png" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="<?= get_template_directory_uri() ?>/img/vimeo.png" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="<?= get_template_directory_uri() ?>/img/linkedin.png" alt="">
-                        </a>
-                        <a href="#">
-                            <img src="<?= get_template_directory_uri() ?>/img/instagram.png" alt="">
-                        </a>
+                        <?php if(get_field('facebook', 'options')) { ?>
+                            <a target="_blank" href="<?php the_field('facebook', 'options') ?>">
+                                <img src="<?= get_template_directory_uri() ?>/img/facebook.png" alt="">
+                            </a>
+                        <?php } if(get_field('twitter', 'options')) { ?>
+                            <a target="_blank" href="<?php the_field('twitter', 'options') ?>">
+                                <img src="<?= get_template_directory_uri() ?>/img/twitter.png" alt="">
+                            </a>
+                        <?php } if(get_field('skype', 'options')) { ?>
+                            <a target="_blank" href="<?php the_field('skype', 'options') ?>">
+                                <img src="<?= get_template_directory_uri() ?>/img/skype.png" alt="">
+                            </a>
+                        <?php } if(get_field('google_plus', 'options')) { ?>
+                            <a target="_blank" href="<?php the_field('google_plus', 'options') ?>">
+                                <img src="<?= get_template_directory_uri() ?>/img/glus.png" alt="">
+                            </a>
+                        <?php } if(get_field('vimeo', 'options')) { ?>
+                            <a target="_blank" href="<?php the_field('vimeo', 'options') ?>">
+                                <img src="<?= get_template_directory_uri() ?>/img/vimeo.png" alt="">
+                            </a>
+                        <?php } if(get_field('linkedin', 'options')) { ?>
+                            <a target="_blank" href="<?php the_field('linkedin', 'options') ?>">
+                                <img src="<?= get_template_directory_uri() ?>/img/linkedin.png" alt="">
+                            </a>
+                        <?php } if(get_field('instagram', 'options')) { ?>
+                            <a target="_blank" href="<?php the_field('instagram', 'options') ?>">
+                                <img src="<?= get_template_directory_uri() ?>/img/instagram.png" alt="">
+                            </a>
+                        <?php } ?>
                     </div>
                 </div>
             </div>

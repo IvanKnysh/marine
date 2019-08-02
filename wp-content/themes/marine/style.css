@@ -455,3 +455,133 @@ body {
     display: flex;
     justify-content: center;
 }
+
+
+
+/* Footer */
+footer {
+
+}
+
+footer .bg-1 {
+    background: #19242a;
+    padding-top: 70px;
+    padding-bottom: 30px;
+}
+
+footer .bg-1 .flx {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .bg-1 .flx .col {
+    width: 25%;
+}
+
+footer .bg-1 .flx .col img.logo {
+    margin-bottom: 20px;
+}
+
+footer .bg-1 .flx .col p {
+    font-size: 12px;
+    color: #7ca1b3;
+    line-height: 20px;
+}
+
+footer .bg-1 .flx .col h3 {
+    font-size: 18px;
+    color: #7ca1b3;
+    font-weight: 300;
+    margin-top: 17px;
+    margin-bottom: 35px;
+}
+
+footer .bg-1 .flx .col h4 {
+    font-size: 18px;
+    color: #7ca1b3;
+    font-weight: 300;
+    margin-top: 17px;
+    margin-bottom: 20px;
+}
+
+footer .bg-1 .flx .col:nth-child(1) {
+    padding-right: 40px;
+}
+
+footer .bg-1 .flx .col:nth-child(2) {
+    padding: 0px 20px;
+}
+
+footer .bg-1 .flx .col:nth-child(2) {
+    padding: 0px 20px;
+}
+
+footer .bg-1 .flx .col div.point {
+    font-size: 12px;
+    color: #7ca1b3;
+    line-height: 20px;
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+footer .bg-1 .flx .col div.point a {
+    color: #7ca1b3;
+}
+
+footer .bg-1 .flx .col div.point a:hover {
+    text-decoration: underline;
+}
+
+footer .bg-1 .flx .col div.point:nth-child(2) {
+    background: url('img/address.png') no-repeat;
+    background-position: 0px 5px;
+}
+
+footer .bg-1 .flx .col div.point:nth-child(3) {
+    background: url('img/phone.png') no-repeat;
+    background-position: 0px 5px;
+}
+
+footer .bg-1 .flx .col div.point:nth-child(4) {
+    background: url('img/mail.png') no-repeat;
+    background-position: 0px 5px;
+}
+
+footer .bg-1 .flx .col .desc {
+    font-size: 12px;
+    color: #7ca1b3;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+
+footer .bg-1 .flx .col input {
+    width: 100%;
+    height: 40px;
+    background: rgba(255,255,255,0.05) url('img/ok.png') no-repeat;
+    background-position: 97% 50%;
+    padding-right: 30px;
+    padding-left: 15px;
+    color: #ffffff;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+footer .bg-1 .flx .col .social a {
+    margin: 0px 5px;
+}
+
+footer .bg-1 .flx .col .social a img {
+    transition: 0.2s;
+}
+
+footer .bg-1 .flx .col .social a:hover img {
+    transform: scale(1.1)
+}
+
+footer .bg-2 {
+    background: #141d22;
+    color: #547e93;
+    font-size: 12px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}

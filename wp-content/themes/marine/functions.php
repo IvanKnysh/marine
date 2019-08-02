@@ -159,7 +159,7 @@ function email() {
 		'show_ui'             => true,
 		'show_in_menu'        => true,
 		'show_in_admin_bar'   => true,
-		'menu_position'       => 99,
+		'menu_position'       => 29,
 		'menu_icon'           => 'dashicons-email-alt',
 		'show_in_nav_menus'   => true,
 		'publicly_queryable'  => true,

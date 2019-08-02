@@ -120,11 +120,11 @@
     <div class="logos">
         <div class="container">
             <div class="flx">
-                <img class="animate-plus" data-animation-delay="0s" data-animations="fadeInUp" data-animation-when-visible="true" data-animation-reset-offscreen="true" src="<?= get_template_directory_uri() ?>/img/logo-1-1.png" alt="">
-                <img class="animate-plus" data-animation-delay="0.2s" data-animations="fadeInUp" data-animation-when-visible="true" data-animation-reset-offscreen="true" src="<?= get_template_directory_uri() ?>/img/logo-1-2.png" alt="">
-                <img class="animate-plus" data-animation-delay="0.4s" data-animations="fadeInUp" data-animation-when-visible="true" data-animation-reset-offscreen="true" src="<?= get_template_directory_uri() ?>/img/logo-1-3.png" alt="">
-                <img class="animate-plus" data-animation-delay="0.6s" data-animations="fadeInUp" data-animation-when-visible="true" data-animation-reset-offscreen="true" src="<?= get_template_directory_uri() ?>/img/logo-1-4.png" alt="">
-                <img class="animate-plus" data-animation-delay="0.8s" data-animations="fadeInUp" data-animation-when-visible="true" data-animation-reset-offscreen="true" src="<?= get_template_directory_uri() ?>/img/logo-1-5.png" alt="">
+                <img src="<?= get_template_directory_uri() ?>/img/logo-1-1.png" alt="">
+                <img src="<?= get_template_directory_uri() ?>/img/logo-1-2.png" alt="">
+                <img src="<?= get_template_directory_uri() ?>/img/logo-1-3.png" alt="">
+                <img src="<?= get_template_directory_uri() ?>/img/logo-1-4.png" alt="">
+                <img src="<?= get_template_directory_uri() ?>/img/logo-1-5.png" alt="">
             </div>
         </div>
     </div>
