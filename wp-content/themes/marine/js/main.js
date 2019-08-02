@@ -11,5 +11,9 @@ jQuery(document).ready(function($) {
         nextArrow: '<button class="btn-next"></button>',
     });
 
+    $('#contact-form a#clear').click(function() {
+        $('#contact-form')[0].reset();
+    });
+
 
 });

@@ -351,3 +351,107 @@ body {
     align-items: center;
     justify-content: space-between;
 }
+
+
+/* Form block */
+.form-block {
+    background: url('img/contacts-bg.jpg') center/cover;
+    padding: 30px 0px;
+}
+
+.form-block h2 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 30px;
+    color: #ffffff;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.form-block #forminfo {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #008fd5;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 800;
+    box-shadow: 0px 0px 20px -5px #000000;
+    padding: 50px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+.form-block #contact-form {
+    width: 545px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-block #contact-form input {
+    width: 100%;
+    height: 45px;
+    border: none;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 35px;
+    color: #19242a;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-block #contact-form input[name="name"] {
+    background: rgba(255,255,255,0.7) url('img/name.png') no-repeat;
+    background-position: 97.5% 50%;
+}
+
+.form-block #contact-form input[name="email"] {
+    background: rgba(255,255,255,0.7) url('img/email.png') no-repeat;
+    background-position: 98% 50%;
+}
+
+.form-block #contact-form textarea {
+    width: 100%;
+    height: 100px;
+    border: none;
+    margin-bottom: 10px;
+    padding: 15px;
+    background: rgba(255,255,255,0.7);
+    color: #19242a;
+    font-size: 14px;
+}
+
+.form-block #contact-form button {
+    background: rgba(255,255,255,0.2);
+    font-size: 11px;
+    color: #ffffff;
+    text-transform: uppercase;
+    width: 120px;
+    height: 45px;
+    margin: 10px 5px;
+}
+
+.form-block a#clear {
+    cursor: pointer;
+    background: rgba(255,255,255,0.2) url('img/clear.png') no-repeat;
+    background-position: 70% 50%;
+    padding-right: 20px;
+    font-size: 11px;
+    color: #ffffff;
+    text-transform: uppercase;
+    width: 120px;
+    height: 45px;
+    text-align: center;
+    line-height: 45px;
+    margin: 10px 5px;
+}
+
+.form-block .flx {
+    display: flex;
+    justify-content: center;
+}

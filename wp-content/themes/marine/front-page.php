@@ -10,8 +10,8 @@
                 </div>
                 <div class="content">
                     <img src="<?= get_template_directory_uri() ?>/img/slider-logo.png" alt="">
-                    <h1 class="animate-plus" data-animation-delay="0s" data-animations="fadeInUp" data-animation-when-visible="true"><?php the_title() ?></h1>
-                    <p class="animate-plus" data-animation-delay="0.3s" data-animations="fadeInUp" data-animation-when-visible="true"><?php the_field('description') ?></p>
+                    <h1 class="animate-plus" data-animation-delay="0s" data-animations="fadeInUp" data-animation-when-visible="true" data-animation-reset-offscreen="true"><?php the_title() ?></h1>
+                    <p class="animate-plus" data-animation-delay="0.3s" data-animations="fadeInUp" data-animation-when-visible="true" data-animation-reset-offscreen="true"><?php the_field('description') ?></p>
                 </div>
             </div>
         <?php endwhile; ?>
@@ -23,22 +23,22 @@
     <div class="bl-1">
         <div class="container">
             <div class="flx">
-                <div class="animate-plus" data-animation-delay="0s" data-animations="fadeInLeft" data-animation-when-visible="true">
+                <div class="animate-plus" data-animation-delay="0s" data-animations="fadeInLeft" data-animation-when-visible="true" data-animation-reset-offscreen="true">
                     <img src="<?= get_template_directory_uri() ?>/img/bl-1-1.png" alt="">
                     <h3>Web development</h3>
                     <p>IT WAS HARD TO MAKE IT SO COOL</p>
                 </div>
-                <div class="animate-plus" data-animation-delay="0.2s" data-animations="fadeInUp" data-animation-when-visible="true">
+                <div class="animate-plus" data-animation-delay="0.2s" data-animations="fadeInUp" data-animation-when-visible="true" data-animation-reset-offscreen="true">
                     <img src="<?= get_template_directory_uri() ?>/img/bl-1-2.png" alt="">
                     <h3>SEO Monitoting</h3>
                     <p>IT WAS HARD TO MAKE IT SO COOL</p>
                 </div>
-                <div class="animate-plus" data-animation-delay="0.4s" data-animations="fadeInUp" data-animation-when-visible="true">
+                <div class="animate-plus" data-animation-delay="0.4s" data-animations="fadeInUp" data-animation-when-visible="true" data-animation-reset-offscreen="true">
                     <img src="<?= get_template_directory_uri() ?>/img/bl-1-3.png" alt="">
                     <h3>Network Communities</h3>
                     <p>IT WAS HARD TO MAKE IT SO COOL</p>
                 </div>
-                <div class="animate-plus" data-animation-delay="0.6s" data-animations="fadeInRight" data-animation-when-visible="true">
+                <div class="animate-plus" data-animation-delay="0.6s" data-animations="fadeInRight" data-animation-when-visible="true" data-animation-reset-offscreen="true">
                     <img src="<?= get_template_directory_uri() ?>/img/bl-1-4.png" alt="">
                     <h3>Web analytics</h3>
                     <p>IT WAS HARD TO MAKE IT SO COOL</p>
@@ -120,11 +120,20 @@
     <div class="logos">
         <div class="container">
             <div class="flx">
-                <img class="animate-plus" data-animation-delay="0s" data-animations="fadeInUp" data-animation-when-visible="true" src="<?= get_template_directory_uri() ?>/img/logo-1-1.png" alt="">
-                <img class="animate-plus" data-animation-delay="0.2s" data-animations="fadeInUp" data-animation-when-visible="true" src="<?= get_template_directory_uri() ?>/img/logo-1-2.png" alt="">
-                <img class="animate-plus" data-animation-delay="0.4s" data-animations="fadeInUp" data-animation-when-visible="true" src="<?= get_template_directory_uri() ?>/img/logo-1-3.png" alt="">
-                <img class="animate-plus" data-animation-delay="0.6s" data-animations="fadeInUp" data-animation-when-visible="true" src="<?= get_template_directory_uri() ?>/img/logo-1-4.png" alt="">
-                <img class="animate-plus" data-animation-delay="0.8s" data-animations="fadeInUp" data-animation-when-visible="true" src="<?= get_template_directory_uri() ?>/img/logo-1-5.png" alt="">
+                <img class="animate-plus" data-animation-delay="0s" data-animations="fadeInUp" data-animation-when-visible="true" data-animation-reset-offscreen="true" src="<?= get_template_directory_uri() ?>/img/logo-1-1.png" alt="">
+                <img class="animate-plus" data-animation-delay="0.2s" data-animations="fadeInUp" data-animation-when-visible="true" data-animation-reset-offscreen="true" src="<?= get_template_directory_uri() ?>/img/logo-1-2.png" alt="">
+                <img class="animate-plus" data-animation-delay="0.4s" data-animations="fadeInUp" data-animation-when-visible="true" data-animation-reset-offscreen="true" src="<?= get_template_directory_uri() ?>/img/logo-1-3.png" alt="">
+                <img class="animate-plus" data-animation-delay="0.6s" data-animations="fadeInUp" data-animation-when-visible="true" data-animation-reset-offscreen="true" src="<?= get_template_directory_uri() ?>/img/logo-1-4.png" alt="">
+                <img class="animate-plus" data-animation-delay="0.8s" data-animations="fadeInUp" data-animation-when-visible="true" data-animation-reset-offscreen="true" src="<?= get_template_directory_uri() ?>/img/logo-1-5.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-block">
+        <div class="container">
+            <h2>Get In Touch!</h2>
+            <div class="form">
+                <?php echo do_shortcode('[form]') ?>
             </div>
         </div>
     </div>

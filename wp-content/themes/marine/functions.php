@@ -132,3 +132,119 @@ function team() {
 }
 
 add_action( 'init', 'team' );
+
+
+
+/**
+* Email
+**/
+function email() {
+
+	$labels = array(
+		'name'                => __( 'Email', 'text-domain' ),
+		'all_items'           => __( 'All email'),
+		'add_new'             => _x( 'Add email', 'text-domain', 'text-domain' ),
+		'add_new_item'        => __( 'Enter email name', 'text-domain' ),
+		'edit_item'           => __( 'Edit email', 'text-domain' ),
+		'search_items'        => __( 'Search email', 'text-domain' ),
+		'not_found'           => __( 'No email', 'text-domain' )
+	);
+
+	$args = array(
+		'labels'                   => $labels,
+		'hierarchical'        => false,
+		'description'         => 'description',
+		'taxonomies'          => array(),
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'show_in_admin_bar'   => true,
+		'menu_position'       => 99,
+		'menu_icon'           => 'dashicons-email-alt',
+		'show_in_nav_menus'   => true,
+		'publicly_queryable'  => true,
+		'exclude_from_search' => false,
+		'has_archive'         => true,
+		'query_var'           => true,
+		'can_export'          => true,
+		'rewrite'             => true,
+		'capability_type'     => 'post',
+		'supports'            => array('title')
+	);
+
+	register_post_type( 'email', $args );
+}
+
+add_action( 'init', 'email' );
+
+
+
+/**
+* Form
+**/
+function form() {
+	
+	ob_start();
+	
+		get_template_part('includes/form');
+	
+	return ob_get_clean();
+}
+add_shortcode( 'form', 'form' );
+
+
+
+/**
+* Form scripts
+**/
+function form_scripts() {
+	wp_enqueue_script( 'jquery-form' );
+	wp_enqueue_script('feedback', get_stylesheet_directory_uri() . '/js/feedback.js', array( 'jquery' ), 1.0, true);
+
+	wp_localize_script(
+		'feedback',
+		'feedback_object',
+		array(
+			'url'   => admin_url( 'admin-ajax.php' ),
+			'nonce' => wp_create_nonce( 'feedback-nonce' ),
+		)
+	);
+}
+add_action( 'wp_enqueue_scripts', 'form_scripts' );
+
+
+
+/**
+* Action callback
+**/
+function ajax_action_callback() {
+
+	$name = trim($_POST['name']);
+    $email = trim($_POST['email']);
+    $msg = strip_tags($_POST['message']);
+
+	if (!empty($name) && !empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
+		$message = "
+            Name: $name \r\n
+            Email: $email \r\n
+            Message: $msg      
+        ";
+		wp_mail( "mr.rauber.ik@gmail.com", "Contact Form", $message );
+
+		$post_data = array(
+			'post_title'    => $name,
+			'post_status'   => 'publish',
+			'post_type'		=> 'email'
+		);
+		$insert = wp_insert_post( $post_data );
+
+		update_field('e-mail', $email, $insert);
+		update_field('message', $msg, $insert);
+
+		wp_send_json_success();
+		wp_die();
+	}
+
+}
+add_action( 'wp_ajax_feedback_action', 'ajax_action_callback' );
+add_action( 'wp_ajax_nopriv_feedback_action', 'ajax_action_callback' );
