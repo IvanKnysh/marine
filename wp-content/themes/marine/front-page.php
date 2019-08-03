@@ -60,7 +60,7 @@
         <div class="container">
             <h2>Recent Posts</h2>
             <div class="flx">
-                <?php $posts = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 8, 'order' => 'DESC' )); ?>
+                <?php $posts = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 8, 'orderby' => 'date', 'order'   => 'ASC' )); ?>
                 <?php if ( $posts->have_posts() ) : ?>
                 <?php while ( $posts->have_posts() ) : $posts->the_post(); ?>
                     

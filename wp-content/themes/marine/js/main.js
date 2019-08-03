@@ -11,8 +11,14 @@ jQuery(document).ready(function($) {
         nextArrow: '<button class="btn-next"></button>',
     });
 
+    // Contact form clear input
     $('#contact-form a#clear').click(function() {
         $('#contact-form')[0].reset();
+    });
+
+    // Visible search form
+    $('.search button').click(function() {
+        $('.search-form').slideToggle(200);
     });
 
 
