@@ -8,7 +8,7 @@
                 </div>
                 <div class="col">
                     <h3>Recent Posts</h3>
-                    <?php $posts = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 2, 'order' => 'DESC' )); ?>
+                    <?php $posts = new WP_Query(array('post_type' => 'post', 'posts_per_page' => 2, 'orderby' => 'date', 'order' => 'ASC' )); ?>
                     <?php if ( $posts->have_posts() ) : ?>
                     <?php while ( $posts->have_posts() ) : $posts->the_post(); ?>
                         
