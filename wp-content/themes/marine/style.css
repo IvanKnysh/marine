@@ -9,6 +9,9 @@ Version: 1.0
 /* Fonts */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,800&display=swap');
 
+
+
+/* Base */
 body, html {
     overflow-x: hidden;
 }
@@ -23,6 +26,7 @@ body {
     margin: auto;
     position: relative;
 }
+
 
 
 /* Header */
@@ -69,6 +73,61 @@ body {
 
 .b1 .flx .contacts .social a:hover img {
     transform: scale(1.1);
+}
+
+.b1 .flx button.mobile-menu {
+    display: none;
+}
+
+.mobile {
+    position: fixed;
+    z-index: 5;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 230px;
+    background: #23323a;
+    transform: translate(230px);
+    transition: 0.3s;
+}
+
+.mobile button {
+    display: block;
+    margin-left: auto;
+    margin-right: 18px;
+    margin-top: 25px;
+}
+
+.mobile ul {
+    padding: 0px 15px;
+    text-align: right;
+    line-height: 35px;
+    margin-top: 30px;
+}
+
+.mobile ul li a {
+    color: #22acc0;
+    font-size: 20px;
+}
+
+.mobile.active {
+    box-shadow: 0px 0px 50px -15px #000000;
+    transform: translate(0px);
+}
+
+.overlay {
+    background: rgba(0,0,0,0.7);
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+}
+
+.overlay.active {
+    display: block;
 }
 
 .b2 {
@@ -210,7 +269,8 @@ body {
     text-transform: uppercase;
     font-weight: 800;
     text-shadow: 0px 0px 18px rgba(50, 84, 97, 0.8);
-    font-size: 82px;  
+    font-size: 82px;
+    padding: 0px 70px;
 }
 
 .slider .content p {
@@ -224,6 +284,7 @@ body {
     line-height: 50px;
     background: url('img/text-line.png') no-repeat;
     background-position: center;
+    padding: 0px 70px;
 }
 
 
@@ -259,6 +320,7 @@ body {
     color: #8cd9ff;
     font-size: 12px;
 }
+
 
 
 /* bl-2 */
@@ -299,6 +361,7 @@ body {
     background: #008fd5 url('img/bl-2-a.png') no-repeat;
     background-position: 40px 50%;
 }
+
 
 
 /* Blog */
@@ -517,6 +580,15 @@ input.submit {
     font-weight: 300;
 }
 
+h3.comment-reply-title {
+    margin-bottom: 10px;
+}
+
+.comment-author {
+    font-weight: 800;
+}
+
+
 
 /* team */
 .team {
@@ -635,6 +707,7 @@ input.submit {
 .form-block #forminfo {
     display: none;
     position: fixed;
+    z-index: 1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -876,3 +949,257 @@ footer .bg-2 {
 
 
 /* Media Query */
+@media (max-width: 1250px) {
+    .container {
+        width: 900px;
+    }
+    .slider .rel {
+        height: auto;
+    }
+    .slider .content p {
+        margin-bottom: 100px;
+    }
+    .bl-1 .flx div h3 {
+        font-size: 20px;
+    }
+    .bl-2 .flx h2 {
+        font-size: 26px;
+    }
+    .posts .flx {
+        padding: 0px 100px;
+    }
+    .posts .flx .post {
+        width: 100%;
+    }
+    .posts .flx .post:nth-child(odd) {
+        padding-right: 0px;
+    }
+    .posts .flx .post:nth-child(even) {
+        padding-left: 0px;
+    }
+    .posts .flx .post:nth-child(4n+4) {
+        margin-bottom: 40px;
+    }
+    .team .card {
+        width: 50%;
+    }
+    .logos .flx img {
+        height: 70px;
+    }
+}
+
+@media (max-width: 950px) {
+    .container {
+        width: 700px;
+    }
+    .slider .content h1 {
+        font-size: 60px;
+    }
+    .slider .content p {
+        font-size: 12px;
+        margin-bottom: 50px;
+    }
+    .bl-1 {
+        padding: 30px 0px;
+        height: auto;
+    }
+    .bl-1 .flx {
+        flex-wrap: wrap;
+    }
+    .bl-1 .flx div {
+        width: 50%;
+        margin-bottom: 50px;
+    }
+    .bl-2 {
+        height: auto;
+        padding: 30px 0px;
+    }
+    .bl-2 .flx {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .bl-2 .flx h2 {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .posts .flx {
+        padding: 0px;
+    }
+    .logos .flx img {
+        height: 60px;
+    }
+    footer .bg-1 .flx {
+        flex-wrap: wrap;
+    }
+    footer .bg-1 .flx .col {
+        width: 50%;
+    }
+    footer .bg-1 .flx .col:nth-child(2) {
+        padding: 0px;
+    }
+}
+
+@media (max-width: 750px) {
+    .container {
+        width: 100%;
+        padding: 0px 15px;
+    }
+    .slider {
+        margin-top: 75px;
+    }
+    .slider .btn-prev {
+        width: 30px;
+        height: 30px;
+        background-size: 30px;
+    }
+    .slider .btn-next {
+        width: 30px;
+        height: 30px;
+        background-size: 30px;
+    }
+    .slider .content h1 {
+        padding: 0px 30px;
+        font-size: 22px;
+    }
+    .slider .content p {
+        padding: 0px 30px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        background: none;
+        height: auto;
+        line-height: 18px;
+    }
+    .slider .content img {
+        width: 30px;
+        margin: 20px auto;
+    }
+    header {
+        position: fixed;
+        width: 100%;
+        z-index: 3;
+        top: 0;
+        box-shadow: 0px 0px 30px -15px #000000;
+    }
+    .b1 .flx .logo img {
+        width: 160px;
+    }
+    .b1 .flx button.mobile-menu {
+        display: block;
+    }
+    .b1 .flx .contacts {
+        display: none;
+    }
+    .b2 {
+        display: none;
+    }
+    .search-form {
+        display: block;
+        width: 200px;
+        top: initial;
+        right: 15px;
+        bottom: 15px;
+    }
+    .border {
+        display: none;
+    }
+    .mobile .social {
+        position: absolute;
+        bottom: 80px;
+        left: 15px;
+    }
+    .mobile .social a {
+        margin: 0px 5px;
+    }
+    .search-form input[name="s"] {
+        width: 100%;
+        height: 40px;
+    }
+    .search-form input[type="submit"] {
+        height: 40px;
+    }
+    .bl-1 .flx div {
+        padding: 0px 10px;
+    }
+    .bl-1 .flx div h3 {
+        text-align: center;
+    }
+    .bl-1 .flx div p {
+        text-align: center;
+    }
+    .bl-2 .flx a {
+        width: 170px;
+        height: 50px;
+        line-height: 50px;
+        background-position: 25px 50%;
+    }
+    .bl-2 .flx h2 {
+        line-height: 30px;
+    }
+    .posts {
+        padding-bottom: 20px;
+    }
+    .posts .flx .post {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 50px;
+    }
+    .posts .flx .date {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .posts .flx .thumb {
+        padding: 0px;
+        margin-bottom: 20px;
+    }
+    .posts .flx h3 {
+        text-align: center;
+    }
+    .posts .flx .excerpt {
+        text-align: center;
+    }
+    .team .card {
+        width: 100%;
+    }
+    .logos {
+        height: auto;
+        padding: 30px 0px;
+    }
+    .logos .flx {
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .logos .flx img {
+        height: auto;
+        margin: 10px 0px;
+    }
+    .form-block #contact-form {
+        width: 100%;
+    }
+    footer .bg-1 {
+        padding-top: 30px;
+    }
+    footer .bg-1 .flx .col {
+        width: 100%;
+    }
+    footer .bg-2 {
+        text-align: center;
+        padding: 20px 0px;
+    }
+    .comment-form-author input, .comment-form-email input {
+        width: 100%;
+    }
+    .mobile-posts {
+        margin-top: 75px;
+    }
+    .form-block #forminfo {
+        width: 300px;
+    }
+}
+
+@media (max-height: 370px) {
+    .mobile .social, .search-form {
+        display: none;
+    }
+}

@@ -1,6 +1,6 @@
 <?php get_header() ?>
 
-    <div class="posts">
+    <div class="posts mobile-posts">
         <div class="container">
             <h2><?php printf( __( 'Search Results for: "%s"', 'shape' ), '<span>' . get_search_query() . '</span>' ); ?></h2>
             <div class="flx">
