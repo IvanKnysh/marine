@@ -1074,6 +1074,12 @@ footer .bg-2 {
         width: 30px;
         margin: 20px auto;
     }
+    .slider .rel {
+        padding: 70px 0px;
+    }
+    .slider .rel .bg img {
+        width: auto;
+    }
     header {
         position: fixed;
         width: 100%;
@@ -1195,6 +1201,9 @@ footer .bg-2 {
     }
     .form-block #forminfo {
         width: 300px;
+    }
+    .post-content {
+        margin-top: 75px;
     }
 }
 
